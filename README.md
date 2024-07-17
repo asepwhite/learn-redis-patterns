@@ -1,4 +1,4 @@
-# Learn redis usage patterns 
+# Learn redis patterns 
 
 ## About 
 
