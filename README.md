@@ -1,9 +1,9 @@
-# Spring boot skeleton project 
+# Learn redis usage patterns 
 
 ## About 
 
 This project is created to help you learn about some of redis usage patterns. 
-Below are redis patterns included in this project
+<br> Below are redis patterns included in this project
 <li>cache aside</li>
 
 ## Getting Started
