@@ -22,21 +22,21 @@ services:
       - "27017:27017"
     networks:
       - learn_redis_patterns_network
-  # learn_redis_patterns_endpoints:
-  #   image: learnredispatterns
-  #   environment:
-  #     SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/basedb
-  #     SPRING_DATASOURCE_USERNAME: baseuser
-  #     SPRING_DATASOURCE_PASSWORD: basepassword
-  #     OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
-  #     SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/redispatterns
-  #   ports:
-  #     - "6800:6800"
-  #   depends_on:
-  #     - postgres
-  #     - mongo
-  #   networks:
-  #     - learn_redis_patterns_network
+  learn_redis_patterns_endpoints:
+    image: learnredispatterns
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/basedb
+      SPRING_DATASOURCE_USERNAME: baseuser
+      SPRING_DATASOURCE_PASSWORD: basepassword
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
+      SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/redispatterns
+    ports:
+      - "6800:6800"
+    depends_on:
+      - postgres
+      - mongo
+    networks:
+      - learn_redis_patterns_network
   jaeger:
     image: jaegertracing/all-in-one:1.57
     expose:
