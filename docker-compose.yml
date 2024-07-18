@@ -11,20 +11,32 @@ services:
     ports:
       - "5432:5432"
     networks:
-      - springbase_network
-  springbase:
-    image: springbase
+      - learn_redis_patterns_network
+  mongo:
+    image: mongo:latest
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/basedb
-      SPRING_DATASOURCE_USERNAME: baseuser
-      SPRING_DATASOURCE_PASSWORD: basepassword
-      OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
+      MONGO_INITDB_DATABASE: redispatterns
+    volumes:
+      - mongo-data:/data/db
     ports:
-      - "6800:6800"
-    depends_on:
-      - postgres
+      - "27017:27017"
     networks:
-      - springbase_network
+      - learn_redis_patterns_network
+  # learn_redis_patterns_endpoints:
+  #   image: learnredispatterns
+  #   environment:
+  #     SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/basedb
+  #     SPRING_DATASOURCE_USERNAME: baseuser
+  #     SPRING_DATASOURCE_PASSWORD: basepassword
+  #     OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
+  #     SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/redispatterns
+  #   ports:
+  #     - "6800:6800"
+  #   depends_on:
+  #     - postgres
+  #     - mongo
+  #   networks:
+  #     - learn_redis_patterns_network
   jaeger:
     image: jaegertracing/all-in-one:1.57
     expose:
@@ -36,9 +48,10 @@ services:
       - "--memory.max-traces"
       - "1000"
     networks:
-      - springbase_network
+      - learn_redis_patterns_network
 networks:
-  springbase_network:
-    name: springbase_network
+  learn_redis_patterns_network:
+    name: learn_redis_patterns_network
 volumes:
   postgres-data:
+  mongo-data:
