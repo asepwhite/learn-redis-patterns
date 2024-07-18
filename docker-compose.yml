@@ -22,6 +22,12 @@ services:
       - "27017:27017"
     networks:
       - learn_redis_patterns_network
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - learn_redis_patterns_network
   learn_redis_patterns_endpoints:
     image: learnredispatterns
     environment:
@@ -30,6 +36,8 @@ services:
       SPRING_DATASOURCE_PASSWORD: basepassword
       OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
       SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/redispatterns
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379
     ports:
       - "6800:6800"
     depends_on:

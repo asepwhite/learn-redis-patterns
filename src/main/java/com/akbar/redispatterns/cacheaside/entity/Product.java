@@ -19,7 +19,7 @@ public class Product {
     private String articleType;
     private String baseColour;
     private String season;
-    private int year;
+    private Integer year;
     private String usage;
     private String productDisplayName;
 }
