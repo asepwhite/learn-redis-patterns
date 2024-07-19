@@ -40,7 +40,6 @@ public class ProductService {
             } catch (JsonProcessingException e) {
                 log.atError()
                     .addKeyValue("redis_entry", redisEntry)
-                    .addKeyValue("stack_trace", e.getStackTrace())
                     .setMessage("Failed to convert redisEntry into List<Product>")
                     .log();
                 throw new InternalError();
@@ -53,7 +52,6 @@ public class ProductService {
                 ops.set(key, mapper.writeValueAsString(products));
             } catch (JsonProcessingException e) {
                 log.atError()
-                    .addKeyValue("stack_trace", e.getStackTrace())
                     .setMessage("Failed to convert List<Product> into String")
                     .log();
                 throw new InternalError();
