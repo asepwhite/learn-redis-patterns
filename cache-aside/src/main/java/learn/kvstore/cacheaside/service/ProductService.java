@@ -26,6 +26,10 @@ public class ProductService {
     private static final Logger log = LoggerFactory.getLogger(ProductService.class.getName());
     private ObjectMapper mapper = new ObjectMapper();
 
+    // public List<Product> searchProductsByDisplayName(String displayName) {
+    //     return productRepository.findProductByProductDisplayNameContainingIgnoreCase(displayName); 
+    // }
+
 
     public List<Product> searchProductsByDisplayName(String displayName) {
         //Get entry from redis

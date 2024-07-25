@@ -20,7 +20,9 @@ Make sure you have installed the following on your machine:
  ```bash
     docker build --tag cache-aside-patterns .
 ```
-3. Run application and it's dependencies
+4. Run application and it's dependencies
  ```bash
     docker compose up
 ```
+5. Import [the product dataset](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset/data) into mongodb.\
+Note: You only need to this once, since after that docker will persist the data into docker directory
