@@ -1,4 +1,4 @@
-package com.akbar.redispatterns.cacheaside.entity;
+package learn.kvstore.cacheaside.model;
 
 
 import org.springframework.data.mongodb.core.mapping.Document;

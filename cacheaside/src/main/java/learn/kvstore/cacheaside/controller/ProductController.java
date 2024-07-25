@@ -1,4 +1,4 @@
-package com.akbar.redispatterns.cacheaside.controller;
+package learn.kvstore.cacheaside.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.akbar.redispatterns.cacheaside.entity.Product;
-import com.akbar.redispatterns.cacheaside.service.ProductService;
+import learn.kvstore.cacheaside.model.Product;
+import learn.kvstore.cacheaside.service.ProductService;
 
 @RestController
 public class ProductController {

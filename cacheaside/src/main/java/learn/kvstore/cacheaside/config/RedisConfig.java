@@ -1,4 +1,4 @@
-package com.akbar.redispatterns.cacheaside.config;
+package learn.kvstore.cacheaside.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.EnableCaching;

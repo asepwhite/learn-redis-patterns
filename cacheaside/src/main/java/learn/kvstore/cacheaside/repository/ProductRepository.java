@@ -1,4 +1,4 @@
-package com.akbar.redispatterns.cacheaside.repository;
+package learn.kvstore.cacheaside.repository;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.akbar.redispatterns.cacheaside.entity.Product;
+import learn.kvstore.cacheaside.model.Product;
 
 @Repository
 public interface ProductRepository extends MongoRepository<Product, String> {

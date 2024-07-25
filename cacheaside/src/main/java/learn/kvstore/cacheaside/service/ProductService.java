@@ -1,4 +1,4 @@
-package com.akbar.redispatterns.cacheaside.service;
+package learn.kvstore.cacheaside.service;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
-import com.akbar.redispatterns.cacheaside.entity.Product;
-import com.akbar.redispatterns.cacheaside.repository.ProductRepository;
-import com.akbar.redispatterns.utils.RedisUtil;
+import learn.kvstore.cacheaside.model.Product;
+import learn.kvstore.cacheaside.repository.ProductRepository;
+import learn.kvstore.cacheaside.utils.RedisUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

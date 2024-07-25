@@ -1,4 +1,4 @@
-package com.akbar.redispatterns;
+package learn.kvstore.cacheaside;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

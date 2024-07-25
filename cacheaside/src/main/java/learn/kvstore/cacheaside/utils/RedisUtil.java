@@ -1,4 +1,4 @@
-package com.akbar.redispatterns.utils;
+package learn.kvstore.cacheaside.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
