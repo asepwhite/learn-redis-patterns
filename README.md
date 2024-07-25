@@ -1,10 +1,9 @@
 # Learn redis patterns 
 
 ## About 
-
-This project is created to help you learn about some of redis usage patterns. 
-<br> Below are redis patterns included in this project
-<li>cache aside</li>
+This project contain example implementations of some common redis usage and invalidation patterns.\
+Below are some of redis patterns included in this project:
+* [Cache aside](https://github.com/asepwhite/learn-redis-patterns/tree/main/cacheaside)
 
 ## Getting Started
 ### Pre-setup

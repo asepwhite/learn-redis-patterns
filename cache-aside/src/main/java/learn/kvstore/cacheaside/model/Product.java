@@ -1,9 +1,9 @@
 package learn.kvstore.cacheaside.model;
 
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
